@@ -1,0 +1,418 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html dir="ltr" lang="en"&gt;<br/>
+ &lt;!--&lt;![endif]--&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="UTF-8"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <br/>
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; <br/>
+  &lt;title&gt;Your Store&lt;/title&gt; <br/>
+  &lt;base href="http://opencart.abstracta.us:80/"&gt; <br/>
+  &lt;meta name="description" content="My Store"&gt; <br/>
+  &lt;script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet"&gt; <br/>
+  &lt;link href="catalog/view/javascript/jquery/swiper/css/swiper.min.css" type="text/css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;link href="catalog/view/javascript/jquery/swiper/css/opencart.css" type="text/css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;script src="catalog/view/javascript/jquery/swiper/js/swiper.jquery.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;script src="catalog/view/javascript/common.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;link href="http://opencart.abstracta.us:80/image/catalog/cart.png" rel="icon"&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;nav id="top"&gt; <br/>
+   &lt;div class="container"&gt;<br/>
+    &lt;div class="pull-left"&gt; <br/>
+     &lt;form action="http://opencart.abstracta.us:80/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency"&gt; <br/>
+      &lt;div class="btn-group"&gt; &lt;button class="btn btn-link dropdown-toggle" data-toggle="dropdown"&gt; &lt;strong&gt;$&lt;/strong&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Currency&lt;/span&gt;&nbsp;&lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+       &lt;ul class="dropdown-menu"&gt; <br/>
+        &lt;li&gt; &lt;button class="currency-select btn btn-link btn-block" type="button" name="EUR"&gt;€ Euro&lt;/button&gt; &lt;/li&gt; <br/>
+        &lt;li&gt; &lt;button class="currency-select btn btn-link btn-block" type="button" name="GBP"&gt;£ Pound Sterling&lt;/button&gt; &lt;/li&gt; <br/>
+        &lt;li&gt; &lt;button class="currency-select btn btn-link btn-block" type="button" name="USD"&gt;$ US Dollar&lt;/button&gt; &lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;input type="hidden" name="code" value=""&gt; <br/>
+      &lt;input type="hidden" name="redirect" value="http://opencart.abstracta.us:80/index.php?route=common/home"&gt; <br/>
+     &lt;/form&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div id="top-links" class="nav pull-right"&gt; <br/>
+     &lt;ul class="list-inline"&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/contact"&gt;&lt;i class="fa fa-phone"&gt;&lt;/i&gt;&lt;/a&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;123456789&lt;/span&gt;&lt;/li&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/account" title="My Account" class="dropdown-toggle" data-toggle="dropdown"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;My Account&lt;/span&gt; &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt; <br/>
+       &lt;ul class="dropdown-menu dropdown-menu-right"&gt; <br/>
+        &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/register"&gt;Register&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/login"&gt;Login&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/wishlist" id="wishlist-total" title="Wish List (0)"&gt;&lt;i class="fa fa-heart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Wish List (0)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=checkout/cart" title="Shopping Cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Shopping Cart&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=checkout/checkout" title="Checkout"&gt;&lt;i class="fa fa-share"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Checkout&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/nav&gt; <br/>
+  &lt;header&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;div class="row"&gt; <br/>
+     &lt;div class="col-sm-4"&gt; <br/>
+      &lt;div id="logo"&gt; <br/>
+       &lt;h1&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=common/home"&gt;Your Store&lt;/a&gt;&lt;/h1&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-sm-5"&gt;<br/>
+      &lt;div id="search" class="input-group"&gt; <br/>
+       &lt;input type="text" name="search" value="" placeholder="Search" class="form-control input-lg"&gt; &lt;span class="input-group-btn"&gt; &lt;button type="button" class="btn btn-default btn-lg"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt; &lt;/span&gt; <br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-sm-3"&gt;<br/>
+      &lt;div id="cart" class="btn-group btn-block"&gt; &lt;button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-inverse btn-block btn-lg dropdown-toggle"&gt;&lt;span id="cart-total"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; 1 item(s) - $602.00&lt;/span&gt;&lt;/button&gt; <br/>
+       &lt;ul class="dropdown-menu pull-right"&gt;<br/>
+        &lt;li&gt; <br/>
+         &lt;table class="table table-striped"&gt; <br/>
+          &lt;tbody&gt;<br/>
+           &lt;tr&gt; <br/>
+            &lt;td class="text-center"&gt; &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=43"&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/macbook_1-47x47.jpg" alt="MacBook" title="MacBook" class="img-thumbnail"&gt;&lt;/a&gt; &lt;/td&gt; <br/>
+            &lt;td class="text-left"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=43"&gt;MacBook&lt;/a&gt; &lt;/td&gt; <br/>
+            &lt;td class="text-right"&gt;x 1&lt;/td&gt; <br/>
+            &lt;td class="text-right"&gt;$602.00&lt;/td&gt; <br/>
+            &lt;td class="text-center"&gt;&lt;button type="button" onclick="cart.remove('222906');" title="Remove" class="btn btn-danger btn-xs"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/td&gt; <br/>
+           &lt;/tr&gt; <br/>
+          &lt;/tbody&gt;<br/>
+         &lt;/table&gt; &lt;/li&gt;<br/>
+        &lt;li&gt; <br/>
+         &lt;div&gt; <br/>
+          &lt;table class="table table-bordered"&gt; <br/>
+           &lt;tbody&gt;<br/>
+            &lt;tr&gt; <br/>
+             &lt;td class="text-right"&gt;&lt;strong&gt;Sub-Total&lt;/strong&gt;&lt;/td&gt; <br/>
+             &lt;td class="text-right"&gt;$500.00&lt;/td&gt; <br/>
+            &lt;/tr&gt; <br/>
+            &lt;tr&gt; <br/>
+             &lt;td class="text-right"&gt;&lt;strong&gt;Eco Tax (-2.00)&lt;/strong&gt;&lt;/td&gt; <br/>
+             &lt;td class="text-right"&gt;$2.00&lt;/td&gt; <br/>
+            &lt;/tr&gt; <br/>
+            &lt;tr&gt; <br/>
+             &lt;td class="text-right"&gt;&lt;strong&gt;VAT (20%)&lt;/strong&gt;&lt;/td&gt; <br/>
+             &lt;td class="text-right"&gt;$100.00&lt;/td&gt; <br/>
+            &lt;/tr&gt; <br/>
+            &lt;tr&gt; <br/>
+             &lt;td class="text-right"&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt; <br/>
+             &lt;td class="text-right"&gt;$602.00&lt;/td&gt; <br/>
+            &lt;/tr&gt; <br/>
+           &lt;/tbody&gt;<br/>
+          &lt;/table&gt; <br/>
+          &lt;p class="text-right"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=checkout/cart"&gt;&lt;strong&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; View Cart&lt;/strong&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;&lt;a href="https://opencart.abstracta.us:443/index.php?route=checkout/checkout"&gt;&lt;strong&gt;&lt;i class="fa fa-share"&gt;&lt;/i&gt; Checkout&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt; <br/>
+         &lt;/div&gt; &lt;/li&gt;<br/>
+       &lt;/ul&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/header&gt; <br/>
+  &lt;div class="container"&gt; <br/>
+   &lt;nav id="menu" class="navbar"&gt; <br/>
+    &lt;div class="navbar-header"&gt;<br/>
+     &lt;span id="category" class="visible-xs"&gt;Categories&lt;/span&gt; &lt;button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div class="collapse navbar-collapse navbar-ex1-collapse"&gt; <br/>
+     &lt;ul class="nav navbar-nav"&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20" class="dropdown-toggle" data-toggle="dropdown"&gt;Desktops&lt;/a&gt; <br/>
+       &lt;div class="dropdown-menu" style=""&gt; <br/>
+        &lt;div class="dropdown-inner"&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20_26"&gt;PC (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20_27"&gt;Mac (1)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+        &lt;/div&gt; &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20" class="see-all"&gt;Show All Desktops&lt;/a&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=18" class="dropdown-toggle" data-toggle="dropdown"&gt;Laptops &amp; Notebooks&lt;/a&gt; <br/>
+       &lt;div class="dropdown-menu" style=""&gt; <br/>
+        &lt;div class="dropdown-inner"&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=18_46"&gt;Macs (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=18_45"&gt;Windows (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+        &lt;/div&gt; &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=18" class="see-all"&gt;Show All Laptops &amp; Notebooks&lt;/a&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25" class="dropdown-toggle" data-toggle="dropdown"&gt;Components&lt;/a&gt; <br/>
+       &lt;div class="dropdown-menu" style=""&gt; <br/>
+        &lt;div class="dropdown-inner"&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25_29"&gt;Mice and Trackballs (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25_28"&gt;Monitors (2)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25_30"&gt;Printers (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25_31"&gt;Scanners (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25_32"&gt;Web Cameras (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+        &lt;/div&gt; &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=25" class="see-all"&gt;Show All Components&lt;/a&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=57"&gt;Tablets&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=17"&gt;Software&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=24"&gt;Phones &amp; PDAs&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=33"&gt;Cameras&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34" class="dropdown-toggle" data-toggle="dropdown"&gt;MP3 Players&lt;/a&gt; <br/>
+       &lt;div class="dropdown-menu" style="margin-left: -190.953px;"&gt; <br/>
+        &lt;div class="dropdown-inner"&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_43"&gt;test 11 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_44"&gt;test 12 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_47"&gt;test 15 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_48"&gt;test 16 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_49"&gt;test 17 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_50"&gt;test 18 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_51"&gt;test 19 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_52"&gt;test 20 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_53"&gt;test 21 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_54"&gt;test 22 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_55"&gt;test 23 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_56"&gt;test 24 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_38"&gt;test 4 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_37"&gt;test 5 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_39"&gt;test 6 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+         &lt;ul class="list-unstyled"&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_40"&gt;test 7 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_41"&gt;test 8 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34_42"&gt;test 9 (0)&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;/ul&gt; <br/>
+        &lt;/div&gt; &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=34" class="see-all"&gt;Show All MP3 Players&lt;/a&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/nav&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div id="common-home" class="container"&gt; <br/>
+   &lt;div class="alert alert-success alert-dismissible"&gt;<br/>
+    &lt;i class="fa fa-check-circle"&gt;&lt;/i&gt; Success: You have added &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=43"&gt;MacBook&lt;/a&gt; to your &lt;a href="http://opencart.abstracta.us:80/index.php?route=checkout/cart"&gt;shopping cart&lt;/a&gt;! &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div class="row"&gt; <br/>
+    &lt;div id="content" class="col-sm-12"&gt;<br/>
+     &lt;div class="swiper-viewport"&gt; <br/>
+      &lt;div id="slideshow0" class="swiper-container swiper-container-horizontal"&gt; <br/>
+       &lt;div class="swiper-wrapper" style="transform: translate3d(-2324px, 0px, 0px); transition-duration: 0ms;"&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 1132px; margin-right: 30px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/banners/MacBookAir-1140x380.jpg" alt="MacBookAir" class="img-responsive" data-pagespeed-url-hash="3984776888" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 1132px; margin-right: 30px;"&gt;<br/>
+         &lt;a href="index.php?route=product/product&amp;path=57&amp;product_id=49"&gt;&lt;script data-pagespeed-no-defer=""&gt;//&lt;![CDATA[<br/>
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l&lt;k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0&gt;b||1342177279&lt;b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b&gt;&gt;&gt;=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0&lt;c){for(var a=Array(c),d=0;d&lt;c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0&gt;=c.offsetWidth&&0&gt;=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a&lt;=b.g.height&&d&lt;=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d&lt;c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d&lt;b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072&gt;=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072&gt;=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0&lt;a.width&&0&lt;a.height&&0&lt;a.naturalWidth&&0&lt;a.naturalHeight||e in b&&a.width&gt;=b[e].o&&a.height&gt;=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://opencart.abstracta.us/','8Xxa2XQLv9',true,false,'x-TJUYcLRXA');<br/>
+//]]&gt;&lt;/script&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/banners/iPhone6-1140x380.jpg" alt="iPhone 6" class="img-responsive" data-pagespeed-url-hash="3650591215" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-active" data-swiper-slide-index="1" style="width: 1132px; margin-right: 30px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/banners/MacBookAir-1140x380.jpg" alt="MacBookAir" class="img-responsive" data-pagespeed-url-hash="3984776888" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 1132px; margin-right: 30px;"&gt;<br/>
+         &lt;a href="index.php?route=product/product&amp;path=57&amp;product_id=49"&gt;&lt;script data-pagespeed-no-defer=""&gt;//&lt;![CDATA[<br/>
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l&lt;k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0&gt;b||1342177279&lt;b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b&gt;&gt;&gt;=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0&lt;c){for(var a=Array(c),d=0;d&lt;c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0&gt;=c.offsetWidth&&0&gt;=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a&lt;=b.g.height&&d&lt;=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d&lt;c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d&lt;b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072&gt;=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072&gt;=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0&lt;a.width&&0&lt;a.height&&0&lt;a.naturalWidth&&0&lt;a.naturalHeight||e in b&&a.width&gt;=b[e].o&&a.height&gt;=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://opencart.abstracta.us/','8Xxa2XQLv9',true,false,'x-TJUYcLRXA');<br/>
+//]]&gt;&lt;/script&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/banners/iPhone6-1140x380.jpg" alt="iPhone 6" class="img-responsive" data-pagespeed-url-hash="3650591215" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="swiper-pagination slideshow0 swiper-pagination-clickable swiper-pagination-bullets"&gt;<br/>
+       &lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet swiper-pagination-bullet-active"&gt;&lt;/span&gt;<br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="swiper-pager"&gt; <br/>
+       &lt;div class="swiper-button-next"&gt;&lt;/div&gt; <br/>
+       &lt;div class="swiper-button-prev"&gt;&lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;script type="text/javascript"&gt;$('#slideshow0').swiper({mode:'horizontal',slidesPerView:1,pagination:'.slideshow0',paginationClickable:true,nextButton:'.swiper-button-next',prevButton:'.swiper-button-prev',spaceBetween:30,autoplay:2500,autoplayDisableOnInteraction:true,loop:true});&lt;/script&gt; <br/>
+     &lt;h3&gt;Featured&lt;/h3&gt; <br/>
+     &lt;div class="row"&gt; <br/>
+      &lt;div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12"&gt; <br/>
+       &lt;div class="product-thumb transition"&gt; <br/>
+        &lt;div class="image"&gt;<br/>
+         &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=43"&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/macbook_1-200x200.jpg" alt="MacBook" title="MacBook" class="img-responsive" data-pagespeed-url-hash="2761936391" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="caption"&gt; <br/>
+         &lt;h4&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=43"&gt;MacBook&lt;/a&gt;&lt;/h4&gt; <br/>
+         &lt;p&gt; Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1..&lt;/p&gt; <br/>
+         &lt;p class="price"&gt; $602.00 &lt;span class="price-tax"&gt;Ex Tax: $500.00&lt;/span&gt; &lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="button-group"&gt; &lt;button type="button" onclick="cart.add('43');"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Add to Cart&lt;/span&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List"&gt;&lt;i class="fa fa-heart"&gt;&lt;/i&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product"&gt;&lt;i class="fa fa-exchange"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12"&gt; <br/>
+       &lt;div class="product-thumb transition"&gt; <br/>
+        &lt;div class="image"&gt;<br/>
+         &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=40"&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/iphone_1-200x200.jpg" alt="iPhone" title="iPhone" class="img-responsive" data-pagespeed-url-hash="3165555430" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="caption"&gt; <br/>
+         &lt;h4&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=40"&gt;iPhone&lt;/a&gt;&lt;/h4&gt; <br/>
+         &lt;p&gt; iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam..&lt;/p&gt; <br/>
+         &lt;p class="price"&gt; $123.20 &lt;span class="price-tax"&gt;Ex Tax: $101.00&lt;/span&gt; &lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="button-group"&gt; &lt;button type="button" onclick="cart.add('40');"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Add to Cart&lt;/span&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('40');" data-original-title="Add to Wish List"&gt;&lt;i class="fa fa-heart"&gt;&lt;/i&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="compare.add('40');" data-original-title="Compare this Product"&gt;&lt;i class="fa fa-exchange"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12"&gt; <br/>
+       &lt;div class="product-thumb transition"&gt; <br/>
+        &lt;div class="image"&gt;<br/>
+         &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=42"&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/apple_cinema_30-200x200.jpg" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;" class="img-responsive" data-pagespeed-url-hash="51690211" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="caption"&gt; <br/>
+         &lt;h4&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=42"&gt;Apple Cinema 30"&lt;/a&gt;&lt;/h4&gt; <br/>
+         &lt;p&gt; The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..&lt;/p&gt; <br/>
+         &lt;p class="price"&gt; &lt;span class="price-new"&gt;$110.00&lt;/span&gt; &lt;span class="price-old"&gt;$122.00&lt;/span&gt; &lt;span class="price-tax"&gt;Ex Tax: $90.00&lt;/span&gt; &lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="button-group"&gt; &lt;button type="button" onclick="cart.add('42');"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Add to Cart&lt;/span&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('42');" data-original-title="Add to Wish List"&gt;&lt;i class="fa fa-heart"&gt;&lt;/i&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="compare.add('42');" data-original-title="Compare this Product"&gt;&lt;i class="fa fa-exchange"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12"&gt; <br/>
+       &lt;div class="product-thumb transition"&gt; <br/>
+        &lt;div class="image"&gt;<br/>
+         &lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=30"&gt;&lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/canon_eos_5d_1-200x200.jpg" alt="Canon EOS 5D" title="Canon EOS 5D" class="img-responsive" data-pagespeed-url-hash="4179028642" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="caption"&gt; <br/>
+         &lt;h4&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/product&amp;product_id=30"&gt;Canon EOS 5D&lt;/a&gt;&lt;/h4&gt; <br/>
+         &lt;p&gt; Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we'r..&lt;/p&gt; <br/>
+         &lt;p class="price"&gt; &lt;span class="price-new"&gt;$98.00&lt;/span&gt; &lt;span class="price-old"&gt;$122.00&lt;/span&gt; &lt;span class="price-tax"&gt;Ex Tax: $80.00&lt;/span&gt; &lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="button-group"&gt; &lt;button type="button" onclick="cart.add('30');"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Add to Cart&lt;/span&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('30');" data-original-title="Add to Wish List"&gt;&lt;i class="fa fa-heart"&gt;&lt;/i&gt;&lt;/button&gt; &lt;button type="button" data-toggle="tooltip" title="" onclick="compare.add('30');" data-original-title="Compare this Product"&gt;&lt;i class="fa fa-exchange"&gt;&lt;/i&gt;&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="swiper-viewport"&gt; <br/>
+      &lt;div id="carousel0" class="swiper-container swiper-container-horizontal"&gt; <br/>
+       &lt;div class="swiper-wrapper" style="transform: translate3d(-1358.4px, 0px, 0px); transition-duration: 0ms;"&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="6" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/harley-130x100.png" alt="Harley Davidson" class="img-responsive" data-pagespeed-url-hash="188786869" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/dell-130x100.png" alt="Dell" class="img-responsive" data-pagespeed-url-hash="2446764371" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/disney-130x100.png" alt="Disney" class="img-responsive" data-pagespeed-url-hash="1385310350" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="9" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/starbucks-130x100.png" alt="Starbucks" class="img-responsive" data-pagespeed-url-hash="3950191946" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="10" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/nintendo-130x100.png" alt="Nintendo" class="img-responsive" data-pagespeed-url-hash="3510309395" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-prev" data-swiper-slide-index="0" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/nfl-130x100.png" alt="NFL" class="img-responsive" data-pagespeed-url-hash="1682958456" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-active" data-swiper-slide-index="1" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/redbull-130x100.png" alt="RedBull" class="img-responsive" data-pagespeed-url-hash="2948112564" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-next" data-swiper-slide-index="2" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/sony-130x100.png" alt="Sony" class="img-responsive" data-pagespeed-url-hash="1580931253" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="3" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/cocacola-130x100.png" alt="Coca Cola" class="img-responsive" data-pagespeed-url-hash="3851455033" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="4" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/burgerking-130x100.png" alt="Burger King" class="img-responsive" data-pagespeed-url-hash="3424180126" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="5" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/canon-130x100.png" alt="Canon" class="img-responsive" data-pagespeed-url-hash="3697897963" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="6" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/harley-130x100.png" alt="Harley Davidson" class="img-responsive" data-pagespeed-url-hash="188786869" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="7" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/dell-130x100.png" alt="Dell" class="img-responsive" data-pagespeed-url-hash="2446764371" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="8" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/disney-130x100.png" alt="Disney" class="img-responsive" data-pagespeed-url-hash="1385310350" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="9" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/starbucks-130x100.png" alt="Starbucks" class="img-responsive" data-pagespeed-url-hash="3950191946" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center" data-swiper-slide-index="10" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/nintendo-130x100.png" alt="Nintendo" class="img-responsive" data-pagespeed-url-hash="3510309395" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/nfl-130x100.png" alt="NFL" class="img-responsive" data-pagespeed-url-hash="1682958456" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/redbull-130x100.png" alt="RedBull" class="img-responsive" data-pagespeed-url-hash="2948112564" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/sony-130x100.png" alt="Sony" class="img-responsive" data-pagespeed-url-hash="1580931253" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/cocacola-130x100.png" alt="Coca Cola" class="img-responsive" data-pagespeed-url-hash="3851455033" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="swiper-slide text-center swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 226.4px;"&gt;<br/>
+         &lt;img src="http://opencart.abstracta.us:80/image/cache/catalog/demo/manufacturer/burgerking-130x100.png" alt="Burger King" class="img-responsive" data-pagespeed-url-hash="3424180126" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="swiper-pagination carousel0 swiper-pagination-clickable swiper-pagination-bullets"&gt;<br/>
+       &lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet swiper-pagination-bullet-active"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;&lt;span class="swiper-pagination-bullet"&gt;&lt;/span&gt;<br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="swiper-pager"&gt; <br/>
+       &lt;div class="swiper-button-next"&gt;&lt;/div&gt; <br/>
+       &lt;div class="swiper-button-prev"&gt;&lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;script type="text/javascript"&gt;$('#carousel0').swiper({mode:'horizontal',slidesPerView:5,pagination:'.carousel0',paginationClickable:true,nextButton:'.swiper-button-next',prevButton:'.swiper-button-prev',autoplay:2500,loop:true});&lt;/script&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;footer&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;div class="row"&gt; <br/>
+     &lt;div class="col-sm-3"&gt; <br/>
+      &lt;h5&gt;Information&lt;/h5&gt; <br/>
+      &lt;ul class="list-unstyled"&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/information&amp;information_id=4"&gt;About Us&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/information&amp;information_id=6"&gt;Delivery Information&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/information&amp;information_id=3"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/information&amp;information_id=5"&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-sm-3"&gt; <br/>
+      &lt;h5&gt;Customer Service&lt;/h5&gt; <br/>
+      &lt;ul class="list-unstyled"&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/contact"&gt;Contact Us&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/return/add"&gt;Returns&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=information/sitemap"&gt;Site Map&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-sm-3"&gt; <br/>
+      &lt;h5&gt;Extras&lt;/h5&gt; <br/>
+      &lt;ul class="list-unstyled"&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/manufacturer"&gt;Brands&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/voucher"&gt;Gift Certificates&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=affiliate/login"&gt;Affiliate&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="http://opencart.abstracta.us:80/index.php?route=product/special"&gt;Specials&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-sm-3"&gt; <br/>
+      &lt;h5&gt;My Account&lt;/h5&gt; <br/>
+      &lt;ul class="list-unstyled"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/account"&gt;My Account&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/order"&gt;Order History&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/wishlist"&gt;Wish List&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://opencart.abstracta.us:443/index.php?route=account/newsletter"&gt;Newsletter&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;hr&gt; <br/>
+    &lt;p&gt;Powered By &lt;a href="http://www.opencart.com"&gt;OpenCart&lt;/a&gt;&lt;br&gt; Your Store © 2023&lt;/p&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/footer&gt; &lt;!--<br/>
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.<br/>
+Please donate via PayPal to donate@opencart.com<br/>
+//--&gt; <br/>
+  &lt;div id="bitnami-banner" data-banner-id="d32a9"&gt; <br/>
+   &lt;style&gt;#bitnami-banner{z-index:100000;height:80px;padding:0;width:120px;background:transparent;position:fixed;right:0;bottom:0;border:0 solid #ededed}#bitnami-banner .bitnami-corner-image-div{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-banner .bitnami-corner-image-div .bitnami-corner-image{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-close-banner-button{height:12px;width:12px;z-index:10000000000;position:fixed;right:5px;bottom:65px;display:none;cursor:pointer}&lt;/style&gt; <br/>
+   &lt;img id="bitnami-close-banner-button" src="/bitnami/images/xclose.png.pagespeed.ic.zGNTK6uUsg.webp" data-pagespeed-url-hash="532604739" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt; <br/>
+   &lt;div class="bitnami-corner-image-div"&gt; &lt;a href="/bitnami/index.html" target="_blank"&gt; &lt;img class="bitnami-corner-image" alt="Bitnami" src="/bitnami/images/xcorner-logo.png.pagespeed.ic.IEIWilc-ea.webp" data-pagespeed-url-hash="2368760042" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"&gt; &lt;/a&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;script type="text/javascript"&gt;//&lt;![CDATA[<br/>
+(function(){var banner=document.getElementById("bitnami-banner");var closeButton=document.getElementById("bitnami-close-banner-button");var toggleCloseButton=function toggleCloseButton(open){if(closeButton){if(open&&banner&&banner.style.display!="none"){closeButton.style.display="block";}else{closeButton.style.display="none";}}return false;};var setCookie=function setCookie(cname,cvalue,exdays){var d=new Date();d.setTime(d.getTime()+(exdays*24*60*60*1000));var expires="expires="+d.toUTCString();document.cookie=cname+"="+cvalue+"; "+expires;};var closeBanner=function closeBanner(open){if(banner){var suffix=banner.getAttribute('data-banner-id')||'global';banner.style.display="none";setCookie('_bitnami_closed_banner_'+suffix,"1",30);}return false;};banner.onmouseover=function(){return toggleCloseButton(1);};banner.onmouseout=function(){return toggleCloseButton(0);};closeButton.onclick=closeBanner;}());<br/>
+//]]&gt;&lt;/script&gt; <br/>
+  &lt;/div&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
